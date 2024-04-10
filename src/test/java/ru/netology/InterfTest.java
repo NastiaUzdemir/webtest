@@ -1,6 +1,7 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,7 @@ public class InterfTest {
         // закгрузить страницу
         // поиск элементов
         // взаимодействие с элементами
-        open("http://0.0.0.0:9999");
+        Selenide.open("http://0.0.0.0:9999");
 
         $("input[type=text]").setValue("Иванов Иван");
         $("input[type=tel]").setValue("+79094397835");
@@ -31,7 +32,7 @@ public class InterfTest {
 
     @Test
     public void testFieldValidation() throws InterruptedException {
-        open("http://0.0.0.0:9999");
+        Selenide.open("http://0.0.0.0:9999");
 
         $("input[type=text]").setValue("");
         $("input[type=tel]").setValue("123");
